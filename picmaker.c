@@ -17,14 +17,14 @@ int main(){
       // rgb[0] = i % 256;
       // rgb[1] = j % 256;
       // rgb[2] = 255;
-      // if (i % 2){
-      //   i += 11;
-      // }
-      rgb[0]= i % 50;
-      // if (j % 2){
-      //   j += 11;
-      // }
-      rgb[1]= j % 50;
+      rgb[0]= i % 70;
+      if (i % 2){
+        rgb[0]= (i % 70) + 11;
+      }
+      rgb[1]= j % 70;
+      if (j % 2){
+        rgb[1]= (j % 70) + 11;
+      }
       rgb[2]= 50;
       snprintf(line, sizeof(line), "%d %d %d ", rgb[0], rgb[1], rgb[2]);
       write(fd, line, strlen(line));
