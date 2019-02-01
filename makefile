@@ -1,3 +1,3 @@
 all: picmaker.c
-	gcc -o pmaker picmaker.c
-	./pmaker
+	gcc -o picmaker picmaker.c
+	./picmaker
